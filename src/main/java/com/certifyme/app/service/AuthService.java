@@ -46,7 +46,7 @@ public class AuthService {
 
         String jwtToken = jwtService.generateToken(user);
         UserResponseDTO userDTO = userMapper.toResponseDTO(user);
-
+        
         return new AuthResponseDTO(jwtToken, userDTO);
     }
 
